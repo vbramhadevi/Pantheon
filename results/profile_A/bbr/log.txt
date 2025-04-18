@@ -1,0 +1,23 @@
+Testing bbr...
+$ /home/ubuntu/pantheon/src/wrappers/bbr.py run_first
+$ /home/ubuntu/pantheon/src/wrappers/bbr.py receiver 44409
+Attempt to set 'bbr' congestion control failed: No such file or directory
+------------------------------------------------------------
+Server listening on TCP port 44409
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+$ /home/ubuntu/pantheon/src/wrappers/bbr.py sender 127.0.0.1 44409
+Attempt to set 'bbr' congestion control failed: No such file or directory
+------------------------------------------------------------
+Client connecting to 127.0.0.1, TCP port 44409
+TCP window size: 2.50 MByte (default)
+------------------------------------------------------------
+[  1] local 127.0.0.1 port 55986 connected with 127.0.0.1 port 44409 (icwnd/mss/irtt=319/32741/18)
+[  1] local 127.0.0.1 port 44409 connected with 127.0.0.1 port 55986 (icwnd/mss/irtt=320/32768/14)
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-75.0005 sec   321 GBytes  36.7 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-75.0105 sec   321 GBytes  36.7 Gbits/sec
+kill_proc_group: killed process group with pgid 119580
+kill_proc_group: killed process group with pgid 119678
+Passed all tests!

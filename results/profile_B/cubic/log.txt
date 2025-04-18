@@ -1,0 +1,23 @@
+Testing cubic...
+$ /home/ubuntu/pantheon/src/wrappers/cubic.py run_first
+$ /home/ubuntu/pantheon/src/wrappers/cubic.py receiver 32967
+------------------------------------------------------------
+Server listening on TCP port 32967
+TCP congestion control set to cubic
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+$ /home/ubuntu/pantheon/src/wrappers/cubic.py sender 127.0.0.1 32967
+------------------------------------------------------------
+Client connecting to 127.0.0.1, TCP port 32967
+TCP congestion control set to cubic
+TCP window size: 2.50 MByte (default)
+------------------------------------------------------------
+[  1] local 127.0.0.1 port 46520 connected with 127.0.0.1 port 32967 (icwnd/mss/irtt=319/32741/17)
+[  1] local 127.0.0.1 port 32967 connected with 127.0.0.1 port 46520 (icwnd/mss/irtt=320/32768/13)
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-75.0002 sec   292 GBytes  33.5 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-75.0141 sec   292 GBytes  33.5 Gbits/sec
+kill_proc_group: killed process group with pgid 119942
+kill_proc_group: killed process group with pgid 120040
+Passed all tests!
